@@ -18,38 +18,39 @@
 
 <body>
   <main>
-    <form id="form">
-    <div class="input-section">
-      <div class="input">
-        <label for="day">DAY</label>
-        <input type="text" id="day" placeholder="DD" />
-      <span class="error-message" id="day-error"> must be a valid day</span>
-      </div>
+    <div class="details">
+      <form id="form">
+        <div class="input-section">
+          <div class="input">
+            <label for="day">DAY</label>
+            <input type="text" id="day" placeholder="DD" />
+            <span class="error-message" id="day-error"> must be a valid day</span>
+          </div>
 
-      <div class="input">
-        <label for="month">MONTH</label>
-        <input type="text" id="month" placeholder="MM" required/>
-        <span class="error-message" id="month-error"> must be a valid month</span>
+          <div class="input">
+            <label for="month">MONTH</label>
+            <input type="text" id="month" placeholder="MM" required />
+            <span class="error-message" id="month-error"> must be a valid month</span>
 
-      </div>
+          </div>
 
-      <div class="input">
-        <label for="year">YEAR</label>
-        <input type="text" id="year" placeholder="YY" />
-        <span class="error-message" id="year-error"> must be in the past</span>
+          <div class="input">
+            <label for="year">YEAR</label>
+            <input type="text" id="year" placeholder="YY" />
+            <span class="error-message" id="year-error"> must be in the past</span>
 
-      </div>
-    </form>
-    </div>
+          </div>
+          </div>
+      </form>
 
     <div class="arrow">
-      <hr />
+      <hr class="hr" />
       <img src="./assets/images/icon-arrow.svg" alt="arrow-icon" class="arrow-icon">
     </div>
 
     <div class="calculated-age">
       <div class="years">
-        <hr class="line line1"  />
+        <hr class="line line1" />
         <hr class="line line1" />
         <p class="display" id="display-year"></p>
         <p class="para">
@@ -60,7 +61,7 @@
       </div>
 
       <div class="months">
-        <hr class="line line2"  />
+        <hr class="line line2" />
         <hr class="line line2" />
         <p class="display" id="display-month"></p>
 
@@ -82,9 +83,8 @@
 
         </p>
       </div>
-      
-    </div>
 
+    </div>
   </main>
 
   <script src="index.js"></script>
