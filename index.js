@@ -6,7 +6,7 @@ const year = document.getElementById("year");
 const day = document.getElementById("day");
 const month = document.getElementById("month");
 const getYear = new Date();
-const currentYear = getYear.getFullYear() - 1;
+const currentYear = getYear.getFullYear() ;
 const label = document.querySelectorAll("label");
 
 //get value
@@ -66,7 +66,7 @@ function getValue(e) {
     const hasEmptyInputs = !year.value.trim() || !month.value.trim() || !day.value.trim();
     const valiidMonth = monthInput <= 12;
     const validDay = dayInput <= 31;
-    const validYear = yearInput < currentYear;
+    const validYear = yearInput <= currentYear;
     const invalidInput = !valiidMonth || !validDay || !validYear;
 
     for (var i = 0; i < label.length; i++) {

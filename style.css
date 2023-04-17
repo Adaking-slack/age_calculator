@@ -4,9 +4,8 @@
 }
 
 body{
-    padding: 2em;
+    padding: 2.5em;
     background-color: hsl(0, 0%, 94%);
-    font-family: 'Poppins', sans-serif;
 }
 
 
@@ -56,7 +55,7 @@ label{
 
 }
 .hr{
-    width: 480px;
+    width: 520px;
     max-width: 90%;
     margin-right: 2em;
  z-index: 1;
@@ -68,7 +67,7 @@ label{
 
 img{
     background-color: hsl(259, 100%, 65%);
-   left:420px;
+   left:450px;
    bottom: 30px;
    position: relative;
   
@@ -78,11 +77,18 @@ img{
 }
 
 
+@font-face {
+    font-family: 'customFont';
+    src: url('/assets/fonts/Poppins-ExtraBoldItalic.ttf') format('truetype');
+    
+  }
+ 
+
 .calculated-age{
     display: flex;
     flex-direction: column;
     width: 200px;
-
+font-family: 'customFont';
 }  
 
 
@@ -125,7 +131,7 @@ p{
 @media only screen and (max-width: 768px) {
     main{
   width: 390px;
-  height: 60vh;
+  height: 50vh;
     }
 
     .input-section{
@@ -148,14 +154,13 @@ p{
     }
     img{
         background-color: hsl(259, 100%, 65%);
-       left:70px;
+       left:80px;
        bottom: 30px;
        position: relative;
        width: 20px;
        height: 20px;
        border-radius: 50%;
        padding: 1em;
-       z-index: 1;
     }
     
  
@@ -186,10 +191,3 @@ p{
 
 
 
-
-@font-face {
-    font-family: 'poppins';
-    src: url('../age-calculator-app-main/assets/fonts/Poppins-Italic.ttf');
-}  
-
- 
