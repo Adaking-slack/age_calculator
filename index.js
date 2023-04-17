@@ -5,54 +5,35 @@ const errorMessage = document.getElementsByClassName("error-message");
 const year = document.getElementById("year");
 const day = document.getElementById("day");
 const month = document.getElementById("month");
-const currentYear = new Date();
-  const label = document.querySelectorAll('label')
+const getYear = new Date();
+const currentYear = getYear.getFullYear() - 1;
+const label = document.querySelectorAll("label");
 
 //get value
-
-
-
-
 
 function getValue(e) {
   const yearInput = year.value.trim();
   const monthInput = month.value.trim();
   const dayInput = day.value.trim();
-  const dayDate = dayInput - currentYear.getDate();
-  const monthDate = monthInput - currentYear.getMonth() - 1;
-  const age = currentYear.getFullYear() - yearInput;
+  const dayDate = dayInput - getYear.getDate();
+  const monthDate = monthInput - getYear.getMonth() - 1;
+  const age = currentYear - yearInput;
 
-  console.log(input)
+
   if (!yearInput || !monthInput || !dayInput) {
+    validateInput();
+  } else if (dayInput > 31) {
+    validateInput();
+    console.log(validateInput);
 
-    //  const errorMessage = document.createElement('p')
-   
+  }else if (!isValidDay(monthInput, dayInput)) {
     validateInput()
-   
-    console.log(errorMessage);
-  } else if(dayInput > 31) {
-  
-    validateInput()
-
-   
-
-    console.log("day", dayDate);
-    console.log("month", monthDate);
-    console.log("year", age);
   }else if (monthInput > 12) {
-    
-
-    validateInput()
-
-
- 
-  }else if(yearInput > currentYear){
-    validateInput()
-
-   
-  }else{
-   displayAge();
-    
+    validateInput();
+  } else if (yearInput > currentYear) {
+    validateInput();
+  } else {
+    displayAge();
   }
 
   function displayAge() {
@@ -61,50 +42,67 @@ function getValue(e) {
     const displayMonth = document.getElementById("display-month");
     const displayDay = document.getElementById("display-day");
 
-    for (var i = 0; i < lineOne.length; i++) {
-      if (yearInput || monthInput || dayInput) {
+    if (!yearInput || !monthInput || !dayInput) {
+      validateInput();
+    } else {
+      for (var i = 0; i < lineOne.length; i++) {
         lineOne[i].style.display = "none";
-        displayYear.textContent = age;
-        displayMonth.textContent = monthDate;
-        displayDay.textContent = dayDate;
+      }
+      displayYear.textContent = age;
+      displayMonth.textContent = monthDate;
+      displayDay.textContent = dayDate;
+      validateInput();
+      clearForm();
+    }
+  }
+
+  function isValidDay(monthInput, dayInput) {
+    const daysInMonth = new Date(2022, monthInput, 0).getDate();
+    return dayInput <= daysInMonth;
+  }
+
+
+  function validateInput() {
+    const hasEmptyInputs = !year.value.trim() || !month.value.trim() || !day.value.trim();
+    const valiidMonth = monthInput <= 12;
+    const validDay = dayInput <= 31;
+    const validYear = yearInput < currentYear;
+    const invalidInput = !valiidMonth || !validDay || !validYear;
+
+    for (var i = 0; i < label.length; i++) {
+      if (hasEmptyInputs || invalidInput) {
+        label[i].style.color = "red";
       } else {
-        displayAge()
-        
+        label[i].style.color = "";
       }
     }
 
+    for (var i = 0; i < errorMessage.length; i++) {
+      if (hasEmptyInputs || invalidInput) {
+        errorMessage[i].style.display = "flex";
+      } else {
+        errorMessage[i].style.display = "none";
+      }
+    }
+
+    for (var i = 0; i < input.length; i++) {
+      if (hasEmptyInputs || invalidInput) {
+        input[i].style.border = "red solid 1px";
+      } else {
+        input[i].style.border = "";
+      }
+    }
+
+    
+    
+  }
+
+  
+
+  function clearForm() {
+    year.value = "";
+    month.value = "";
+    day.value = "";
   }
 }
-arrowIcon.addEventListener("click", getValue,);
-
-function validateInput(){
-  for (var i = 0; i < label.length; i++) {
-        if(getValue){
-          label[i].style.color = "red";
-
-        }else if(getValue) {
-              label[i].style.color = "none";
-
-        }
-  }
-
-  // for (var i = 0; i < errorMessage.length; i++) {
-  //   if(getValue){
-  //     errorMessage[i].style.display = "block";
-
-  //   }else{
-  //         errorMessage[i].style.display = "none";
-
-  //   }
-  // }
-
-  // for (var i = 0; i < input.length; i++) {
-  //   if(getValue){
-  //     input[i].style.border = "red solid 1px";
-
-  //   }else{
-  //         input[i].style.border = "black solid 1px";
-
-  //   }
-  // }
-}
+arrowIcon.addEventListener("click", getValue);
