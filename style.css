@@ -10,7 +10,6 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    padding: 1em;
 }
 
 
@@ -25,7 +24,7 @@ main {
     padding-bottom: 0px;
     padding-top: 25px;
     position: relative;
-    margin: 2em;
+    margin: 1em;
 
 }
 
@@ -218,7 +217,7 @@ img:active {
         font-size: 6em;
         position: relative;
         right: 6px;
-        bottom: 36px;
+        bottom: 27px;
         font-weight: 800i;
         font-family: 'poppins';
 
