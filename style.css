@@ -14,16 +14,17 @@ body {
 
 
 main {
-    min-width: clamp(50%, 50vw, 70%);
-    padding: 2.6em;
+    min-width: clamp(47%, 50vw, 70%);
+    padding: 2em;
     align-content: center;
-    min-height: 80vh;
+    min-height: 70vh;
     background-color: hsl(0, 0%, 100%);
     border-radius: 30px 30px 150px 30px;
     padding: clamp(0.1rem, 5vw, 4rem);
     padding-bottom: 0px;
     padding-top: 25px;
     position: relative;
+    margin: 1em;
 
 }
 
@@ -118,8 +119,7 @@ img:active {
     width: 200px;
     font-weight: 800;
     font-size: clamp(0.2rem, 2vw, 1rem);
-    font-style: italic;
-margin-top: 2em;
+    font-style: bold;
 }
 
 
@@ -136,7 +136,7 @@ margin-top: 2em;
     display: flex;
 }
 
-p {
+.para {
     font-size: 4em;
     position: relative;
     font-weight: 800i;
@@ -170,11 +170,12 @@ p {
 
 
 @media only screen and (max-width: 768px) {
- 
-main{
-    border-radius: 20px 20px 90px 20px;
 
-}
+    main {
+        border-radius: 20px 20px 90px 20px;
+
+    }
+
     .input-section {
         display: flex;
     }
@@ -189,10 +190,10 @@ main{
         font-size: 10px;
     }
 
-.calculated-age{
-    margin-top: 2em;
+    .calculated-age {
+        margin-top: 2em;
 
-}
+    }
 
     .arrow {
         margin-top: 1em;
@@ -202,7 +203,7 @@ main{
         background-color: hsl(259, 100%, 65%);
         left: 80px;
         bottom: 30px;
-left: 95px;
+        left: 95px;
         position: relative;
         width: 20px;
         height: 20px;
@@ -211,11 +212,11 @@ left: 95px;
     }
 
 
-    p {
+    .para {
         font-size: 5.4em;
         position: relative;
         right: 6px;
-      bottom: 16px;
+        bottom: 16px;
         font-weight: 800i;
         font-family: 'poppins';
 
@@ -236,4 +237,3 @@ left: 95px;
 
     }
 }
-
