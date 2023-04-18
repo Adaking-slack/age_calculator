@@ -14,7 +14,7 @@ body {
 
 
 main {
-    min-width: clamp(49%, 60vw, 75%);
+    min-width: clamp(40%, 55vw, 70%);
     padding: 2em;
     align-content: center;
     min-height: 70vh;
@@ -22,7 +22,6 @@ main {
     border-radius: 30px 30px 150px 30px;
     padding: clamp(0.1rem, 5vw, 4rem);
     padding-bottom: 0px;
-    padding-top: 25px;
     position: relative;
     margin: 1em;
 
