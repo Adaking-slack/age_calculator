@@ -170,9 +170,7 @@ p {
 
 
 @media only screen and (max-width: 768px) {
-   body{
-    padding: 1em;
-   }
+ 
 main{
     border-radius: 20px 20px 90px 20px;
 
