@@ -213,10 +213,10 @@ img:active {
 
 
     .para {
-        font-size: 5em;
+        font-size: 6em;
         position: relative;
         right: 6px;
-        bottom: 20px;
+        bottom: 20%;
         font-weight: 800i;
         font-family: 'poppins';
 
