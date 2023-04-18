@@ -9,12 +9,12 @@ body {
     background-color: hsl(0, 0%, 94%);
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 95vh;
 }
 
 
 main {
-    min-width: clamp(40%, 55vw, 70%);
+    min-width: clamp(40%, 50vw, 70%);
     padding: 2em;
     align-content: center;
     min-height: 70vh;
