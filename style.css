@@ -18,7 +18,7 @@ main {
     padding: 2.6em;
     max-width: 70%;
     align-content: center;
-    min-height: 80%;
+    min-height: 80vh;
     margin: 0 auto;
     background-color: hsl(0, 0%, 100%);
     border-radius: 2em;
@@ -117,7 +117,7 @@ img:active {
     font-weight: 800;
     font-size: clamp(0.2rem, 2vw, 1rem);
     font-style: italic;
-
+margin-top: 2em;
 }
 
 
@@ -140,8 +140,8 @@ p {
     font-weight: 800i;
     font-family: 'poppins';
     position: relative;
-    right: 16px;
-    bottom: 25px;
+    right: 1%;
+    bottom: 42px;
 
 }
 
@@ -184,7 +184,10 @@ p {
         font-size: 10px;
     }
 
+.calculated-age{
+    margin-top: 2em;
 
+}
 
     .arrow {
         margin-top: 1em;
@@ -208,7 +211,7 @@ p {
         font-size: 5.4em;
         position: relative;
         right: 6px;
-    bottom: 25px;
+    bottom: 19px;
         font-weight: 800i;
         font-family: 'poppins';
 
