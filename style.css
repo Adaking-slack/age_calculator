@@ -14,15 +14,17 @@ body {
 
 
 main {
-    width: 550px;
+    min-width: clamp(50%, 50vw, 70%);
     padding: 2.6em;
-    max-width: 70%;
     align-content: center;
     min-height: 80vh;
-    margin: 0 auto;
     background-color: hsl(0, 0%, 100%);
-    border-radius: 2em;
-    border-bottom-right-radius: 4em;
+    border-radius: 30px 30px 150px 30px;
+    padding: clamp(0.1rem, 5vw, 4rem);
+    padding-bottom: 0px;
+    padding-top: 25px;
+    position: relative;
+
 }
 
 .input-section {
@@ -92,7 +94,7 @@ label {
 
 img {
     background-color: hsl(259, 100%, 65%);
-    left: 450px;
+    left: 500px;
     bottom: 30px;
     position: relative;
     transition: 200ms;
@@ -141,7 +143,7 @@ p {
     font-family: 'poppins';
     position: relative;
     right: 1%;
-    bottom: 42px;
+    bottom: 14px;
 
 }
 
@@ -168,8 +170,13 @@ p {
 
 
 @media only screen and (max-width: 768px) {
-   
+   body{
+    padding: 1em;
+   }
+main{
+    border-radius: 20px 20px 90px 20px;
 
+}
     .input-section {
         display: flex;
     }
@@ -211,7 +218,7 @@ p {
         font-size: 5.4em;
         position: relative;
         right: 6px;
-    bottom: 19px;
+      bottom: 16px;
         font-weight: 800i;
         font-family: 'poppins';
 
@@ -232,3 +239,4 @@ p {
 
     }
 }
+
