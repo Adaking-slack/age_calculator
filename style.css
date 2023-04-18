@@ -4,7 +4,7 @@
 }
 
 body{
-    padding: 2.5em;
+    padding: 1.5em;
     background-color: hsl(0, 0%, 94%);
 }
 
@@ -44,13 +44,13 @@ input:hover{
 }
 label{
     padding-left: 0.6em;
-    font-size: 0.8em;
+    font-size: 0.9em;
 }
 
 .error-message {
     display: none;
     color: red;
-    font-size: 0.4em;
+    font-size: 0.6em;
   }
 .details{
     display: flex;
@@ -141,8 +141,8 @@ p{
 
 @media only screen and (max-width: 768px) {
     main{
-  width: 390px;
-  height: 65vh;
+  width: 970px;
+  height: 70vh;
     }
 
     .input-section{
