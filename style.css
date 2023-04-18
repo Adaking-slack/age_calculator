@@ -14,7 +14,7 @@ body {
 
 
 main {
-    min-width: clamp(47%, 50vw, 70%);
+    min-width: clamp(49%, 60vw, 75%);
     padding: 2em;
     align-content: center;
     min-height: 70vh;
@@ -214,10 +214,10 @@ img:active {
 
 
     .para {
-        font-size: 6em;
+        font-size: 5em;
         position: relative;
         right: 6px;
-        bottom: 27px;
+        bottom: 20px;
         font-weight: 800i;
         font-family: 'poppins';
 
